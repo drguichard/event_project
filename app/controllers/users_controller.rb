@@ -9,6 +9,7 @@ before_action :authenticate_guser, only: [:show]
 
 	def show
 		@user = User.find(params[:id])
+		@events_array = @user.events
 	end
 
 private

@@ -19,3 +19,35 @@
 
 			</br>
 </div>
+
+		
+<div class="container">
+
+	<h1>Affichage des événements du profil !</h1>
+
+	<% @events_array.each do |e| %>
+		
+		<div class="card">
+			<div class="card-header">
+			<%= "Titre : " + e.title %>
+				</br>
+			</div>
+
+			<div class="card-body">	 
+				<%= "description : " +  e.description %>
+			</br>
+				<%= "ville : " +  e.location %>
+			</br>
+				<%= "Durée : " +  e.duration.to_s %>
+			</br>
+				<%= "commencement : " +  e.start_date.to_s %>
+			</br>
+				<%= "fin : " +  e.end_date %>
+			</br>
+				<%= "Prix : " + e.price.to_s %>
+			</br>
+			</div>
+	<% end %>
+
+			</br>
+</div>

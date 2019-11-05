@@ -11,7 +11,7 @@ class User < ApplicationRecord
   end
 
 
-	has_many :appointments
-  has_many :patients, through: :appointments
+	has_many :attendances
+  has_many :events, through: :attendances
 
 end

@@ -9,6 +9,7 @@ require 'faker'
 
 Attendance.destroy_all
 Event.destroy_all
+#User.destroy_all
 
 10.times do
 
@@ -21,18 +22,14 @@ puts "10 users ont été crée."
 
 10.times do 
 
-	Event.create!(title: Faker::Lorem.word, description: Faker::Lorem.paragraph, location: Faker::Address.city, start_date: Faker::Date.forward(days: 1200), duration: rand(1..7), price: rand(1..300))
+	e =	Event.create!(title: Faker::Lorem.word, description: Faker::Lorem.paragraph, location: Faker::Address.city, start_date: Faker::Date.forward(days: 1200), duration: rand(1..7), price: rand(1..300))
+	Attendance.create(user: User.all.sample, event: e)
 
 end
 
-puts "10 events ont été crée."
 
-20.times do
 
-	Attendance.create(user: User.all.sample, event: Event.all.sample)
 
-end
 
-puts "20 Attendances ont été crée."
 
 puts "Génération terminée."

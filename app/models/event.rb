@@ -12,4 +12,7 @@ class Event < ApplicationRecord
   has_many :users, through: :attendances
 
 
+	def end_date
+		return "edeeded"
+	end
 end
