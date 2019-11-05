@@ -1,7 +1,7 @@
 <div class="jumbotron">
         <div class="container">
           <h1 class="display-3">Bienvenue sur EVENTYTY!</h1>
-          <p>Le site pour créer et organiser des évenements.</p>
+          <p>Le site pour créer et organiser des événements.</p>
         </div>
 </div>
 
@@ -13,7 +13,9 @@
 
 <div class="container">
 
-	<h1>Mon super site de gossip !</h1>
+	<h1>Les événements !</h1>
+
+	<%= link_to "Créer un événements", new_event_path, class: 'btn btn-primary mb-5 mt-5' %> 
 	<% @events_array.each do |e| %>	
 		<div class="card">
 			<div class="card-header">	<%= "Titre : " + e.title %></div>
