@@ -1,0 +1,21 @@
+<div class="container">
+
+	<h1>Affichage du profil !</h1>
+		
+		<div class="card">
+			<div class="card-header">
+			<%= "Prénom : " + @user.first_name %>
+				</br>
+			<%= "Nom : " + @user.last_name %>
+				</br>
+			</div>
+
+			<div class="card-body">	 
+				<%= "description : " +  @user.description %>
+			</br>
+				<%= "Email : " +  @user.email %>
+			</br>
+			</div>
+
+			</br>
+</div>

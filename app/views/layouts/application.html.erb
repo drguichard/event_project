@@ -70,7 +70,7 @@
 							</button>
 							
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<%= link_to "Profil", root_path, class: 'btn btn-primary dropdown-item' %>
+									<%= link_to "Profil", user_path(current_user.id), class: 'btn btn-primary dropdown-item' %>
 									<%= link_to "Sign out", destroy_user_session_path, class: 'btn btn-primary dropdown-item', method: :delete %>
 							</div>
 
