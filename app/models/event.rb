@@ -17,9 +17,9 @@ class Event < ApplicationRecord
 
 		require 'date'
 		d = self.start_date
-		puts d
 		#f =  d.year.to_s +  "-"  + d.month.to_s + "-" + d.day.to_s
-		f = DateTime.new(d.year, d.month, d.day + self.duration)
+		e =  (d.day + self.duration) % 30 
+		f = DateTime.new(d.year, d.month,e)
 		return f
 	end
 end
