@@ -12,6 +12,20 @@ before_action :authenticate_guser, only: [:show]
 		@events_array = @user.events
 	end
 
+	def edit
+		@user = User.new
+	end
+
+		
+	def update
+		post_params = params.require(:user).permit(:first_name, :last_name, :description)
+		@user = User.find(params[:id])
+		if @user.update(post_params) then
+			redirect_to root_path
+		else
+			render 'edit'
+		end	
+	end
 private
 
 	def authenticate_guser
@@ -21,4 +35,5 @@ private
 		end	
 	end
 
+	
 end

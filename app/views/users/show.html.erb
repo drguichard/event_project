@@ -23,7 +23,10 @@
 			</br>
 			</div>
 			<div class="card-body">	 
-				<%= link_to "Editer profil", edit_user_registration_path, class: 'btn btn-primary mb-5 mt-5' %> 
+				<%= link_to "Editer profil", edit_user_registration_path, class: 'btn btn-primary ' %> 
+			</div>
+			<div class="card-body">	 
+				<%= link_to "changer les informations", edit_user_path(current_user.id), class: 'btn btn-primary ' %> 
 			</div>
 			</br>
 </div>

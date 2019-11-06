@@ -21,7 +21,7 @@ class EventsController < ApplicationController
 			@event = Event.new(post_params)
 		if @event.save then
 			Attendance.create(user: current_user, event: @event)
-			redirect_to root_path
+			redirect_to event_path(@event.id)
 		else
 			render 'new'
 		end
