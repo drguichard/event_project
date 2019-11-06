@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
 
+
 	validates :start_date, presence: true
 	validates :duration, presence: true
 	validates :title, presence: true
@@ -13,6 +14,12 @@ class Event < ApplicationRecord
 
 
 	def end_date
-		return "edeeded"
+
+		require 'date'
+		d = self.start_date
+		puts d
+		#f =  d.year.to_s +  "-"  + d.month.to_s + "-" + d.day.to_s
+		f = DateTime.new(d.year, d.month, d.day + self.duration)
+		return f
 	end
 end
